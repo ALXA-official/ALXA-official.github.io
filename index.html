@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALXA</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+    background:#0b0b0b;
+    color:white;
+    text-align:center;
+}
+
+.container {
+    padding:80px 20px;
+}
+
+h1 {
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.subtitle {
+    color:gray;
+    margin-bottom:30px;
+}
+
+select {
+    padding:8px;
+    margin-top:20px;
+    border-radius:5px;
+}
+
+.box {
+    margin-top:40px;
+    padding:20px;
+    background:#111;
+    border-radius:10px;
+    display:inline-block;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>ALXA</h1>
+
+    <p id="title" class="subtitle">Website Under Construction</p>
+
+    <div class="box">
+        <p id="msg">We are working on something awesome.</p>
+    </div>
+
+    <br>
+
+    <!-- Language switch -->
+    <select onchange="setLang(this.value)">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+    </select>
+
+</div>
+
+<script>
+
+let lang = {
+    en: {
+        title: "Website Under Construction",
+        msg: "We are working on something awesome."
+    },
+    es: {
+        title: "Sitio en construcción",
+        msg: "Estamos trabajando en algo increíble."
+    }
+};
+
+function setLang(l){
+    document.getElementById("title").innerText = lang[l].title;
+    document.getElementById("msg").innerText = lang[l].msg;
+}
+
+</script>
+
+</body>
+</html>
